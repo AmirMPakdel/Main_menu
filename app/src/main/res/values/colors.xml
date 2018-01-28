@@ -2,5 +2,11 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!-- start colors -->
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="MAFIA_white">#FFFFFF</color>
+    <color name="MAFIA_red">#b90000</color>
+
 </resources>

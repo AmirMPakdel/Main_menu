@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.coins.black.main_menu", appContext.getPackageName());
+        assertEquals("com.coins.black.Main_menu", appContext.getPackageName());
     }
 }

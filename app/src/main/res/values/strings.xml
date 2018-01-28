@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Main_menu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- start -->
+    <string name="start">شروع</string>
+    <string name="exit_hint">برای خارج شدن از بازی یک بار دیگه دکمه back فشار بدید</string>
+    <!-- main menu -->
+    <string name="play">شروع بازی</string>
+    <string name="profile">پروفایل</string>
+    <string name="friends">دوستان</string>
+    <string name="shop">خرید</string>
+    <string name="settings">تنظیمات</string>
 </resources>

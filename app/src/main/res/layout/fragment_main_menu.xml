@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Fragments.Main_menu"
+    android:background="@drawable/gradient">
+
+
+    <ImageView
+        android:id="@+id/main_menu_sky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:src="@drawable/sky" />
+
+    <ImageView
+
+        android:id="@+id/star1"
+        android:translationY="60dp"
+        android:translationX="50dp"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/star1"/>
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_alignParentEnd="true"
+        android:translationY="120dp"
+        android:translationX="-100dp"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+
+        android:src="@drawable/star1"/>
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_centerHorizontal="true"
+        android:translationY="80dp"
+        android:translationX="-10dp"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:src="@drawable/star3"/>
+
+
+    <ImageView
+        android:id="@+id/main_menu_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:src="@drawable/menu2" />
+
+    <ImageView
+        android:id="@+id/ply"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:src="@drawable/play" />
+
+
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:paddingRight="43dp"
+        android:paddingLeft="43dp"
+
+        android:layout_above="@+id/profile_btn"
+
+        android:background="@drawable/button_gradient"
+        android:text="@string/play"
+        android:textColor="@color/colorButtonText" />
+
+    <Button
+        android:id="@+id/profile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:layout_above="@+id/friends_btn"
+
+        android:background="@drawable/button_gradient"
+        android:text="@string/profile"
+        android:textColor="@color/colorButtonText" />
+
+    <Button
+        android:id="@+id/friends_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:paddingRight="51dp"
+        android:paddingLeft="51dp"
+
+        android:layout_centerVertical="true"
+
+        android:background="@drawable/button_gradient"
+        android:text="@string/friends"
+        android:textColor="@color/colorButtonText" />
+
+    <Button
+        android:id="@+id/shop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:paddingEnd="58dp"
+        android:paddingStart="58dp"
+
+        android:layout_below="@id/friends_btn"
+
+        android:background="@drawable/button_gradient"
+        android:text="@string/shop"
+        android:textColor="@color/colorButtonText" />
+
+    <Button
+        android:id="@+id/setting_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="15dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+
+        android:layout_below="@id/shop_btn"
+
+        android:background="@drawable/button_gradient"
+        android:text="@string/settings"
+        android:textColor="@color/colorButtonText" />
+
+
+
+</RelativeLayout>
