@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout">
+
+    <com.ramotion.foldingcell.FoldingCell
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        folding-cell:animationDuration="1000"
+        folding-cell:backSideColor="#b32323"
+        folding-cell:additionalFlipsCount="2"
+        folding-cell:cameraHeight="30"
+        android:layout_margin="10dp">
+        ​
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+        </FrameLayout>
+        ​
+        <RelativeLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/imageViewHead"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:src="@drawable/police_1"
+                android:background="@color/colorAccent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_toRightOf="@+id/imageViewHead"
+                android:id="@+id/textViewHead"
+                android:text="افسر"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+        ​
+    </com.ramotion.foldingcell.FoldingCell>
+
+</LinearLayout>

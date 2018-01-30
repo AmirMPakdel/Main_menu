@@ -4,6 +4,7 @@ package Fragments;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -17,6 +18,7 @@ import android.widget.ImageView;
 
 import com.coins.black.main_menu.MainActivity;
 import com.coins.black.main_menu.R;
+import com.coins.black.main_menu.Skills;
 
 
 public class Main_menu extends Fragment {
@@ -50,9 +52,25 @@ public class Main_menu extends Fragment {
 
         button1 = (Button) view.findViewById(R.id.play_btn);
         button2 = (Button) view.findViewById(R.id.profile_btn);
-        button3 = (Button) view.findViewById(R.id.friends_btn);
+        button3 = (Button) view.findViewById(R.id.skills_btn);
         button4 = (Button) view.findViewById(R.id.shop_btn);
         button5 = (Button) view.findViewById(R.id.setting_btn);
+
+        // button1.setOnClickListener(playGameListener);
+        // button2.setOnClickListener(profileListener);
+        // button3.setOnClickListener(skillsListener);
+        // button4.setOnClickListener(shopListener);
+        // button5.setOnClickListener(settingListener);
+
+         button3.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(getActivity(),Skills.class);
+                 startActivity(intent);
+             }
+         });
+
+
 
         // get the width of screen
         DisplayMetrics displayMetrics = new DisplayMetrics();
