@@ -55,15 +55,25 @@ public class PoliceFragment extends Fragment {
         PolicePic.add(R.drawable.police_2);
         PolicePic.add(R.drawable.police_3);
 
-        for(int i =1;i<=3; i++ ){
 
-            SkillItem skillItem = new SkillItem(
-                    "heading" + (i), PolicePic.get(i-1)
+        SkillItem skillItem1 = new SkillItem(
+                "بازرس" , PolicePic.get(0)
 
-            );
+        );
+        skillItems.add(skillItem1);
 
-            skillItems.add(skillItem);
-        }
+        SkillItem skillItem2 = new SkillItem(
+                "گارد ویژه" , PolicePic.get(1)
+
+        );
+        skillItems.add(skillItem2);
+
+        SkillItem skillItem3 = new SkillItem(
+                "رئیس پلیس" , PolicePic.get(2)
+
+        );
+        skillItems.add(skillItem3);
+
 
         adapter = new SkillAdapter(skillItems,getActivity());
 
