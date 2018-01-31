@@ -10,10 +10,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import Fragments.AddictedFragment;
 import Fragments.PoliceFragment;
+
+import static com.coins.black.main_menu.MainActivity.log;
 
 public class Skills extends AppCompatActivity {
 
@@ -25,8 +28,10 @@ public class Skills extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skills);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        // Making Activity Fullscreen
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        log("full screened");
+        
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());

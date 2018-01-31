@@ -18,6 +18,7 @@ import android.widget.ImageView;
 
 import com.coins.black.main_menu.MainActivity;
 import com.coins.black.main_menu.R;
+import com.coins.black.main_menu.SelfProfile;
 import com.coins.black.main_menu.Skills;
 
 
@@ -56,13 +57,17 @@ public class Main_menu extends Fragment {
         button4 = (Button) view.findViewById(R.id.shop_btn);
         button5 = (Button) view.findViewById(R.id.setting_btn);
 
-        // button1.setOnClickListener(playGameListener);
-        // button2.setOnClickListener(profileListener);
-        // button3.setOnClickListener(skillsListener);
-        // button4.setOnClickListener(shopListener);
-        // button5.setOnClickListener(settingListener);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SelfProfile.class);
+                startActivity(intent);
+            }
+        });
 
-         button3.setOnClickListener(new View.OnClickListener() {
+
+
+        button3.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  Intent intent = new Intent(getActivity(),Skills.class);

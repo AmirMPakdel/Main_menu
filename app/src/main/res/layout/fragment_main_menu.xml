@@ -77,7 +77,7 @@
         android:layout_above="@+id/profile_btn"
 
         android:background="@drawable/button_gradient"
-        android:text="@string/play"
+        android:text="Start"
         android:textColor="@color/colorButtonText" />
 
     <Button
@@ -88,10 +88,10 @@
         android:layout_margin="15dp"
         android:paddingRight="50dp"
         android:paddingLeft="50dp"
-        android:layout_above="@+id/friends_btn"
+        android:layout_above="@+id/skills_btn"
 
         android:background="@drawable/button_gradient"
-        android:text="@string/profile"
+        android:text="Profile"
         android:textColor="@color/colorButtonText" />
 
     <Button
@@ -118,10 +118,10 @@
         android:paddingEnd="58dp"
         android:paddingStart="58dp"
 
-        android:layout_below="@id/friends_btn"
+        android:layout_below="@id/skills_btn"
 
         android:background="@drawable/button_gradient"
-        android:text="@string/shop"
+        android:text="Shop"
         android:textColor="@color/colorButtonText" />
 
     <Button
@@ -136,7 +136,7 @@
         android:layout_below="@id/shop_btn"
 
         android:background="@drawable/button_gradient"
-        android:text="@string/settings"
+        android:text="setting"
         android:textColor="@color/colorButtonText" />
 
 
