@@ -8,5 +8,8 @@
     <color name="colorButtonText">#FFFFFF</color>
     <color name="MAFIA_white">#FFFFFF</color>
     <color name="MAFIA_red">#b90000</color>
+    <color name="Folding_cell_background">#bcbcbc</color>
+    <color name="Folding_cell_content">#414141</color>
+    <color name="black">#000000</color>
 
 </resources>

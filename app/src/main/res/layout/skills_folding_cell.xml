@@ -12,28 +12,54 @@
         android:layout_height="wrap_content"
         android:clipChildren="true"
         android:clipToPadding="true"
-        folding-cell:animationDuration="1000"
-        folding-cell:backSideColor="#b32323"
-        folding-cell:additionalFlipsCount="2"
-        folding-cell:cameraHeight="30"
-        android:layout_margin="10dp">
+        folding-cell:animationDuration="4000"
+        folding-cell:backSideColor="@color/Folding_cell_background"
+        folding-cell:additionalFlipsCount="1"
+        folding-cell:cameraHeight="80"
+        android:layout_margin="15dp">
         ​
-        <FrameLayout
+        <RelativeLayout
             android:id="@+id/cell_content_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_dark"
+            android:background="@color/Folding_cell_content"
             android:visibility="gone">
+            <ImageView
+                android:id="@+id/content_skill_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/test"
+                />
+            <TextView
+                android:id="@+id/content_skill_text"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/content_skill_image"
+                android:layout_marginTop="0dp"
+                android:textSize="20dp"
+                android:text="حالا وقتش رسیده که فلانسیبسیبسیبسیبسیبسی سیبسیسیبسی و تمام."
+                android:textColor="@color/colorAccent"
+                android:background="@color/black"
+                />
+           <Button
+                android:id="@+id/content_skill_button"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/content_skill_text"
+                android:text="خرید"
+                android:textSize="30dp"/>
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="250dp" />
-        </FrameLayout>
+                android:layout_height="300dp" />
+        </RelativeLayout>
         ​
         <RelativeLayout
             android:id="@+id/cell_title_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark">
+            android:background="@color/colorPrimaryDark"
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageViewHead"
@@ -55,6 +81,8 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 />
+
+
         </RelativeLayout>
         ​
     </com.ramotion.foldingcell.FoldingCell>
