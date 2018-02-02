@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coins.black.main_menu.Shop"
+    android:padding="20dp"
+    android:background="@drawable/shop_background">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/button7"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="1000"
+        android:textStyle="bold"
+
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:id="@+id/button9"
+        android:layout_alignTop="@+id/button5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="4000"
+        android:textStyle="bold"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:id="@+id/button5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="3000"
+        android:textStyle="bold"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/button6"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="6000"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="5000"
+        android:textStyle="bold"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/button8"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_coin"
+        android:textColor="@color/button_text_color"
+        android:text="2000"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

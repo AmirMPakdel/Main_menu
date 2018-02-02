@@ -20,8 +20,10 @@
         </activity>
         <activity
             android:name=".Skills"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SelfProfile"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SelfProfile" />
+        <activity android:name=".Shop" />
+        <activity android:name=".Setting"></activity>
     </application>
 
 </manifest>

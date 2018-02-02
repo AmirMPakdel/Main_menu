@@ -19,5 +19,10 @@
     <color name="endRed">#e60b2c</color>
     <color name="colorFlatButton">#f32136</color>
 
+    <!--shop page-->
+    <color name="button_text_color">#ffffff</color>
+    <color name="Button_color">#aa000000</color>
+    <color name="Button_stroke">#ffffff</color>
+
 
 </resources>

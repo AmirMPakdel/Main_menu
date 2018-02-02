@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import com.coins.black.main_menu.MainActivity;
 import com.coins.black.main_menu.R;
 import com.coins.black.main_menu.SelfProfile;
+import com.coins.black.main_menu.Setting;
+import com.coins.black.main_menu.Shop;
 import com.coins.black.main_menu.Skills;
 
 
@@ -74,6 +76,24 @@ public class Main_menu extends Fragment {
                  startActivity(intent);
              }
          });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Shop.class);
+                startActivity(intent);
+            }
+        });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Setting.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
 
