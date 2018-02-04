@@ -23,7 +23,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SelfProfile" />
         <activity android:name=".Shop" />
-        <activity android:name=".Setting"></activity>
+        <activity android:name=".Setting" />
+        <activity android:name=".JoiningRoom"></activity>
     </application>
 
 </manifest>

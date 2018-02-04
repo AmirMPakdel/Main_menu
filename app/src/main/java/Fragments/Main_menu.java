@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.coins.black.main_menu.JoiningRoom;
 import com.coins.black.main_menu.MainActivity;
 import com.coins.black.main_menu.R;
 import com.coins.black.main_menu.SelfProfile;
@@ -58,6 +59,14 @@ public class Main_menu extends Fragment {
         button3 = (Button) view.findViewById(R.id.skills_btn);
         button4 = (Button) view.findViewById(R.id.shop_btn);
         button5 = (Button) view.findViewById(R.id.setting_btn);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), JoiningRoom.class);
+                startActivity(intent);
+            }
+        });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
