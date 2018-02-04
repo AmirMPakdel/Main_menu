@@ -64,7 +64,7 @@ public class Main_menu extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), JoiningRoom.class);
-                startActivity(intent);
+                startActivity(intent); //change
             }
         });
 

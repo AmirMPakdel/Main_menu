@@ -10,7 +10,7 @@ public class JoiningRoom extends AppCompatActivity {
 
     Button startChat;
 
-    private ProgressBar spinner;
+    private ProgressBar spinner; //change
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
