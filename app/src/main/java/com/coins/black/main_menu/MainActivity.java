@@ -11,12 +11,10 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import Fragments.Main_menu;
 import Fragments.Start;
 
 public class MainActivity extends AppCompatActivity {
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // when a button clicked
+    // when a button clicked this will make it feels like in 3D
     public static void ButtonClick(final Button button) {
         button.setOnTouchListener(new OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -81,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
+        // double click for exiting the app
         if (this.doubleBackToExitPressedOnce) {
             finish();
             mediaPlayer.stop();
