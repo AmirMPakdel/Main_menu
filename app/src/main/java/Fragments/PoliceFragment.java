@@ -32,16 +32,6 @@ public class PoliceFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_police, container, false);
 
-        //        // get our folding cell
-//        final FoldingCell fc = (FoldingCell) findViewById(R.id.folding_cell);
-//        // attach click listener to folding cell
-//        fc.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                fc.toggle(false);
-//            }
-//        });
-
 
         recyclerView = (RecyclerView) view.findViewById(R.id.police_recyclerView);
         recyclerView.setHasFixedSize(true);

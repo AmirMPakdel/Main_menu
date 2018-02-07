@@ -14,7 +14,19 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import Fragments.AddictedFragment;
+import Fragments.BullyFragment;
+import Fragments.DetectiveFragment;
+import Fragments.DoctorFragment;
+import Fragments.GodfatherFragment;
+import Fragments.GuerrillaFragment;
+import Fragments.MafiaFragment;
+import Fragments.MurdererFragment;
 import Fragments.PoliceFragment;
+import Fragments.SalesGunsFragment;
+import Fragments.SniperFragment;
+import Fragments.SpyFragment;
+import Fragments.TerroristFragment;
+import Fragments.ThiefFragment;
 
 import static com.coins.black.main_menu.MainActivity.log;
 
@@ -90,6 +102,42 @@ public class Skills extends AppCompatActivity {
                 case 1:
                     AddictedFragment addicted = new AddictedFragment();
                     return addicted;
+                case 2:
+                    BullyFragment bully = new BullyFragment();
+                    return bully;
+                case 3:
+                    DetectiveFragment detective = new DetectiveFragment();
+                    return detective;
+                case 4:
+                    DoctorFragment doctor = new DoctorFragment();
+                    return doctor;
+                case 5:
+                    GodfatherFragment godfather = new GodfatherFragment();
+                    return godfather;
+                case 6:
+                    GuerrillaFragment guerrilla = new GuerrillaFragment();
+                    return guerrilla;
+                case 7:
+                    MafiaFragment mafia = new MafiaFragment();
+                    return mafia;
+                case 8:
+                    MurdererFragment murderer = new MurdererFragment();
+                    return murderer;
+                case 9:
+                    SalesGunsFragment salesGuns = new SalesGunsFragment();
+                    return salesGuns;
+                case 10:
+                    SniperFragment sniper = new SniperFragment();
+                    return sniper;
+                case 11:
+                    SpyFragment spy = new SpyFragment();
+                    return spy;
+                case 12:
+                    TerroristFragment terrorist = new TerroristFragment();
+                    return terrorist;
+                case 13:
+                    ThiefFragment thief = new ThiefFragment();
+                    return thief;
 
             }
             return null;
@@ -98,7 +146,7 @@ public class Skills extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 14;
         }
 
         @Override

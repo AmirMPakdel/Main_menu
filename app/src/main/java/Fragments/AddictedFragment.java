@@ -39,21 +39,23 @@ public class AddictedFragment extends Fragment {
 
         skillItems = new ArrayList<>();
 
-        List<Integer> PolicePic = new ArrayList<>();
+        List<Integer> AddictedPic = new ArrayList<>();
 
-        PolicePic.add(R.drawable.addicted_1);
-        PolicePic.add(R.drawable.addicted_2);
-        PolicePic.add(R.drawable.addicted_3);
+        AddictedPic.add(R.drawable.addicted_1);
+        AddictedPic.add(R.drawable.addicted_3);
 
-        for(int i =1;i<=3; i++ ){
+        SkillItem skillItem1 = new SkillItem(
+                "سیگاری" , AddictedPic.get(0)
 
-            SkillItem skillItem = new SkillItem(
-                    "heading" + (i), PolicePic.get(i-1)
+        );
+        skillItems.add(skillItem1);
 
-            );
+        SkillItem skillItem2 = new SkillItem(
+                "تزریقی" , AddictedPic.get(1)
 
-            skillItems.add(skillItem);
-        }
+        );
+        skillItems.add(skillItem2);
+
 
         adapter = new SkillAdapter(skillItems,getActivity());
 
