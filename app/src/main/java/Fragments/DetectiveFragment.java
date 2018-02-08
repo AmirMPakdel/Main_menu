@@ -38,28 +38,21 @@ public class DetectiveFragment extends Fragment {
 
         List<Integer> DetectivePic = new ArrayList<>();
 
-        DetectivePic.add(R.drawable.police_1);
-        DetectivePic.add(R.drawable.police_2);
-        DetectivePic.add(R.drawable.police_3);
+        DetectivePic.add(R.drawable.detective_2);
+        DetectivePic.add(R.drawable.detective_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , DetectivePic.get(0)
+                "تنهایی تمومه" , DetectivePic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , DetectivePic.get(1)
+                "سریع" , DetectivePic.get(1)
 
         );
         skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , DetectivePic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());

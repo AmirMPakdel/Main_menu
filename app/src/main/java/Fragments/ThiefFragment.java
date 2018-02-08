@@ -39,25 +39,25 @@ public class ThiefFragment extends Fragment {
 
         List<Integer> ThiefPic = new ArrayList<>();
 
-        ThiefPic.add(R.drawable.police_1);
-        ThiefPic.add(R.drawable.police_2);
-        ThiefPic.add(R.drawable.police_3);
+        ThiefPic.add(R.drawable.thief_1);
+        ThiefPic.add(R.drawable.thief_2);
+        ThiefPic.add(R.drawable.thief_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , ThiefPic.get(0)
+                "دزد سرکوچه" , ThiefPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , ThiefPic.get(1)
+                "دله دزد" , ThiefPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
         SkillItem skillItem3 = new SkillItem(
-                "نام 3" , ThiefPic.get(2)
+                "سارق حرفه ای" , ThiefPic.get(2)
 
         );
         skillItems.add(skillItem3);

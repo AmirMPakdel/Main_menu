@@ -39,25 +39,25 @@ public class SniperFragment extends Fragment {
 
         List<Integer> SniperPic = new ArrayList<>();
 
-        SniperPic.add(R.drawable.police_1);
-        SniperPic.add(R.drawable.police_2);
-        SniperPic.add(R.drawable.police_3);
+        SniperPic.add(R.drawable.sniper_1);
+        SniperPic.add(R.drawable.sniper_2);
+        SniperPic.add(R.drawable.sniper_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , SniperPic.get(0)
+                "دولولی" , SniperPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , SniperPic.get(1)
+                "رگباری" , SniperPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
         SkillItem skillItem3 = new SkillItem(
-                "نام 3" , SniperPic.get(2)
+                "بی اهمیت" , SniperPic.get(2)
 
         );
         skillItems.add(skillItem3);

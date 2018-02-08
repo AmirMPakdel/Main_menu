@@ -38,28 +38,14 @@ public class TerroristFragment extends Fragment {
 
         List<Integer> TerroristPic = new ArrayList<>();
 
-        TerroristPic.add(R.drawable.police_1);
-        TerroristPic.add(R.drawable.police_2);
-        TerroristPic.add(R.drawable.police_3);
-
+        TerroristPic.add(R.drawable.terrorist_2);
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , TerroristPic.get(0)
+                "باهوش" , TerroristPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
-        SkillItem skillItem2 = new SkillItem(
-                "نام 2" , TerroristPic.get(1)
-
-        );
-        skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , TerroristPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());

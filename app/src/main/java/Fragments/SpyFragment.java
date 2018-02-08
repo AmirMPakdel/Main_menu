@@ -39,28 +39,22 @@ public class SpyFragment extends Fragment {
 
         List<Integer> SpyPic = new ArrayList<>();
 
-        SpyPic.add(R.drawable.police_1);
-        SpyPic.add(R.drawable.police_2);
-        SpyPic.add(R.drawable.police_3);
+        SpyPic.add(R.drawable.spy_1);
+        SpyPic.add(R.drawable.spy_2);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , SpyPic.get(0)
+                "جاسوس موقت" , SpyPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , SpyPic.get(1)
+                "کارآگاه بعدی" , SpyPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , SpyPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());

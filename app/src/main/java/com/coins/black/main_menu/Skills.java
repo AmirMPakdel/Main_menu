@@ -145,7 +145,7 @@ public class Skills extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
+            // Show count total pages.
             return 14;
         }
 

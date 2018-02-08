@@ -39,28 +39,16 @@ public class BullyFragment extends Fragment {
 
         List<Integer> BullyPic = new ArrayList<>();
 
-        BullyPic.add(R.drawable.police_1);
-        BullyPic.add(R.drawable.police_2);
-        BullyPic.add(R.drawable.police_3);
+        BullyPic.add(R.drawable.bully_2);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , BullyPic.get(0)
+                "رئیس محله" , BullyPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
-        SkillItem skillItem2 = new SkillItem(
-                "نام 2" , BullyPic.get(1)
 
-        );
-        skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , BullyPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());

@@ -39,25 +39,25 @@ public class MafiaFragment extends Fragment {
 
         List<Integer> MafiaPic = new ArrayList<>();
 
-        MafiaPic.add(R.drawable.police_1);
-        MafiaPic.add(R.drawable.police_2);
-        MafiaPic.add(R.drawable.police_3);
+        MafiaPic.add(R.drawable.mafia_1);
+        MafiaPic.add(R.drawable.mafia_2);
+        MafiaPic.add(R.drawable.mafia_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , MafiaPic.get(0)
+                "متقلب" , MafiaPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , MafiaPic.get(1)
+                "حواس جمع" , MafiaPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
         SkillItem skillItem3 = new SkillItem(
-                "نام 3" , MafiaPic.get(2)
+                "ضد گلوله" , MafiaPic.get(2)
 
         );
         skillItems.add(skillItem3);

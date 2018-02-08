@@ -38,29 +38,21 @@ public class GuerrillaFragment extends Fragment {
 
         List<Integer> GuerrillaPic = new ArrayList<>();
 
-        GuerrillaPic.add(R.drawable.police_1);
-        GuerrillaPic.add(R.drawable.police_2);
-        GuerrillaPic.add(R.drawable.police_3);
+        GuerrillaPic.add(R.drawable.guerrilla_1);
+        GuerrillaPic.add(R.drawable.guerrilla_2);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , GuerrillaPic.get(0)
+                "دونده" , GuerrillaPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , GuerrillaPic.get(1)
+                "آماده" , GuerrillaPic.get(1)
 
         );
         skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , GuerrillaPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
-
 
         adapter = new SkillAdapter(skillItems,getActivity());
 

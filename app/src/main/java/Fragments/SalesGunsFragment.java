@@ -39,25 +39,25 @@ public class SalesGunsFragment extends Fragment {
 
         List<Integer> SalesGunsPic = new ArrayList<>();
 
-        SalesGunsPic.add(R.drawable.police_1);
-        SalesGunsPic.add(R.drawable.police_2);
-        SalesGunsPic.add(R.drawable.police_3);
+        SalesGunsPic.add(R.drawable.sales_guns_1);
+        SalesGunsPic.add(R.drawable.sales_guns_2);
+        SalesGunsPic.add(R.drawable.sales_guns_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , SalesGunsPic.get(0)
+                "چاقو فروش" , SalesGunsPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , SalesGunsPic.get(1)
+                "کلتی" , SalesGunsPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
         SkillItem skillItem3 = new SkillItem(
-                "نام 3" , SalesGunsPic.get(2)
+                "کلاشینکف" , SalesGunsPic.get(2)
 
         );
         skillItems.add(skillItem3);

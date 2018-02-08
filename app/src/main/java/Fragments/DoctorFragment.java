@@ -38,28 +38,21 @@ public class DoctorFragment extends Fragment {
 
         List<Integer> DoctorPic = new ArrayList<>();
 
-        DoctorPic.add(R.drawable.police_1);
-        DoctorPic.add(R.drawable.police_2);
-        DoctorPic.add(R.drawable.police_3);
+        DoctorPic.add(R.drawable.doctor_1);
+        DoctorPic.add(R.drawable.doctor_2);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , DoctorPic.get(0)
+                "آمپول زن" , DoctorPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , DoctorPic.get(1)
+                "متخصص" , DoctorPic.get(1)
 
         );
         skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , DoctorPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());

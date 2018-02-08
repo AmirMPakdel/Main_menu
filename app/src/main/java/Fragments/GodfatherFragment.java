@@ -39,25 +39,25 @@ public class GodfatherFragment extends Fragment {
 
         List<Integer> GodfatherPic = new ArrayList<>();
 
-        GodfatherPic.add(R.drawable.police_1);
-        GodfatherPic.add(R.drawable.police_2);
-        GodfatherPic.add(R.drawable.police_3);
+        GodfatherPic.add(R.drawable.godfather_1);
+        GodfatherPic.add(R.drawable.godfather_2);
+        GodfatherPic.add(R.drawable.godfather_3);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , GodfatherPic.get(0)
+                "سیاست مدار" , GodfatherPic.get(0)
 
         );
         skillItems.add(skillItem1);
 
         SkillItem skillItem2 = new SkillItem(
-                "نام 2" , GodfatherPic.get(1)
+                "زیرک" , GodfatherPic.get(1)
 
         );
         skillItems.add(skillItem2);
 
         SkillItem skillItem3 = new SkillItem(
-                "نام 3" , GodfatherPic.get(2)
+                "حرفه ای" , GodfatherPic.get(2)
 
         );
         skillItems.add(skillItem3);

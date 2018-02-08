@@ -39,28 +39,14 @@ public class MurdererFragment extends Fragment {
 
         List<Integer> MurdererPic = new ArrayList<>();
 
-        MurdererPic.add(R.drawable.police_1);
-        MurdererPic.add(R.drawable.police_2);
-        MurdererPic.add(R.drawable.police_3);
+        MurdererPic.add(R.drawable.murderer_2);
 
 
         SkillItem skillItem1 = new SkillItem(
-                "نام 1" , MurdererPic.get(0)
+                "باهوش" , MurdererPic.get(0)
 
         );
         skillItems.add(skillItem1);
-
-        SkillItem skillItem2 = new SkillItem(
-                "نام 2" , MurdererPic.get(1)
-
-        );
-        skillItems.add(skillItem2);
-
-        SkillItem skillItem3 = new SkillItem(
-                "نام 3" , MurdererPic.get(2)
-
-        );
-        skillItems.add(skillItem3);
 
 
         adapter = new SkillAdapter(skillItems,getActivity());
