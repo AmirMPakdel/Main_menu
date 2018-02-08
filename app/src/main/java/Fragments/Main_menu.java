@@ -8,11 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -22,6 +25,7 @@ import com.coins.black.main_menu.R;
 import com.coins.black.main_menu.SelfProfile;
 import com.coins.black.main_menu.Setting;
 import com.coins.black.main_menu.Shop;
+import com.coins.black.main_menu.Signup;
 import com.coins.black.main_menu.Skills;
 
 
@@ -41,6 +45,7 @@ public class Main_menu extends Fragment {
     Button button3;
     Button button4;
     Button button5;
+    Button signupBtn;
 
 
     public Main_menu() {
@@ -49,7 +54,7 @@ public class Main_menu extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main_menu, container, false);
@@ -59,6 +64,7 @@ public class Main_menu extends Fragment {
         button3 = (Button) view.findViewById(R.id.skills_btn);
         button4 = (Button) view.findViewById(R.id.shop_btn);
         button5 = (Button) view.findViewById(R.id.setting_btn);
+        signupBtn = (Button) view.findViewById(R.id.signup_btn);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +81,6 @@ public class Main_menu extends Fragment {
                 startActivity(intent);
             }
         });
-
 
 
         button3.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +107,13 @@ public class Main_menu extends Fragment {
             }
         });
 
-
+        signupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Signup.class);
+                startActivity(intent);
+            }
+        });
 
 
 

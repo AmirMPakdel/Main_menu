@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coins.black.main_menu.Signup">
+
+    <TextView
+        android:id="@+id/username_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="50dp"
+
+        android:text="username"
+
+        android:textSize="10pt"/>
+
+    <TextView
+        android:id="@+id/email_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below = "@id/username_lbl"
+        android:layout_margin="50dp"
+
+        android:text="email"
+
+        android:textSize="10pt"/>
+
+    <EditText
+        android:id="@+id/username_txt"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+
+        android:layout_toEndOf="@id/username_lbl"
+        android:layout_alignBottom="@id/username_lbl" />
+
+    <EditText
+        android:id="@+id/email_txt"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:inputType="textEmailAddress"
+
+        android:layout_alignStart="@id/username_txt"
+        android:layout_toEndOf="@id/email_lbl"
+        android:layout_alignBottom="@id/email_lbl"/>
+
+
+    <TextView
+        android:id="@+id/results_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Check_btn"
+        android:layout_marginTop="80dp"
+
+        android:textSize="10pt"
+        android:textColor="#b70000"/>
+
+    <Button
+        android:id="@+id/Check_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        android:text="Check"/>
+
+
+</RelativeLayout>
