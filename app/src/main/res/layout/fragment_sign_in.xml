@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="Fragments.SignInFragment">
+
+    <TextView
+        android:id="@+id/email_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Email :"
+
+        android:textSize="10pt"
+
+        android:layout_margin="50dp" />
+
+    <TextView
+        android:id="@+id/password_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Password :"
+
+        android:textSize="10pt"
+        android:layout_below="@id/email_lbl"
+        android:layout_margin="50dp"/>
+
+    <EditText
+        android:id="@id/email_txt"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:text="ddag@gjkd.com"
+
+        android:textColor="#00bfff"
+
+        android:layout_alignEnd="@id/password_txt"
+        android:layout_alignBottom="@id/email_lbl"/>
+
+    <EditText
+        android:id="@+id/password_txt"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+
+        android:text="gdeuj876"
+
+        android:textColor="#00bfff"
+
+        android:layout_toEndOf="@id/password_lbl"
+        android:layout_alignBottom="@id/password_lbl"/>
+
+    <Button
+        android:id="@+id/signin_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="SIGN IN"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/password_lbl"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/results2_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/signin_btn"
+        android:layout_marginTop="30dp"
+
+        android:textSize="8pt"
+        android:textColor="#b70000"/>
+
+    <TextView
+        android:id="@+id/forgot_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/forgot"
+        android:textColor="#001eff"
+        android:textSize="8pt"
+
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>

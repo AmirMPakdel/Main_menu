@@ -15,6 +15,11 @@ import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Socket;
+
+import java.net.URISyntaxException;
+
 import Fragments.Start;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
 
     MediaPlayer mediaPlayer;
+
+    public static Socket socket;
 
 
     public static void log(String info){Log.i("AAA Team :",info);}
@@ -36,11 +43,24 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         log("full screened");
 
+        // try to connect to server by making a socket
+        log("try to setup socket");
+        // setup the socket
+        try {
+            socket = IO.socket("http://192.168.43.237:3000");
+
+        } catch (URISyntaxException e) {
+
+            log("couldn't connect to the server!");
+        }
+
+        socket.connect();
+
         //play the music
         mediaPlayer = MediaPlayer.create(this, R.raw.mafia_intro);
         mediaPlayer.start();
 
-        // showing th start fragment
+        // showing the start fragment
         Start fragment_start = new Start();
         log("fragment start obj");
 
@@ -82,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         // double click for exiting the app
         if (this.doubleBackToExitPressedOnce) {
+            socket.disconnect();
             finish();
             mediaPlayer.stop();
             super.onBackPressed();

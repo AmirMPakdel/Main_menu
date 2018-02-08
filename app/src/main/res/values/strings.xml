@@ -14,4 +14,8 @@
     <string name="shop">خرید</string>
     <string name="settings">تنظیمات</string>
     <string name="skills">skills</string>
+
+    <!-- signup/in -->
+    <string name="already"><u>I\'ve already signed up</u></string>
+    <string name="forgot"><u>I forgot the password!</u></string>
 </resources>
