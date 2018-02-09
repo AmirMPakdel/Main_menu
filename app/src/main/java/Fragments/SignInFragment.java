@@ -12,10 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.coins.black.main_menu.MainActivity;
 import com.coins.black.main_menu.R;
-import com.coins.black.main_menu.Signup;
 import com.github.nkzawa.emitter.Emitter;
 
 import org.json.JSONException;
@@ -80,6 +80,7 @@ public class SignInFragment extends Fragment {
             }
         });
 
+        // get user_id and username form server
         socket.on("signin_r", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
@@ -89,24 +90,35 @@ public class SignInFragment extends Fragment {
 
                     json = new JSONObject(args[0].toString());
 
-                    if(json.getString("user_id").length() != 0){
+                    if(json.getString("user_id").length() != 0 && json.getString("username").length() != 0){
 
-                        // saving the user_id
+                        // saving the user_id, username , email
                         log("try to save the id");
 
-                        save = Signup.save;
+                        save = getActivity().getSharedPreferences(MainActivity.PREFS_NAME, 0);
 
                         SharedPreferences.Editor saveEditor = save.edit();
 
                         saveEditor.putString("user_id", json.getString("user_id")).apply();
+                        saveEditor.putString("username", json.getString("username")).apply();
+                        saveEditor.putString("email", email_txt.getText().toString());
 
-                        log(json.getString("user_id"));
+                        log(save.getString("user_id", "Id didn't saved!"));
+                        log(save.getString("username", "Username didn't saved!"));
 
-                        // successfully signed up now go to main menu
+                        // successfully signed in now go to main menu
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 results.setText("You signed in successfully");
+
+                                Intent intent = new Intent(getActivity().getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                                // stop the goddamn music
+                                MainActivity.mediaPlayer.stop();
+                                // Tell user that successfully signed in
+                                Toast.makeText(getActivity(), "You signed in successfully",Toast.LENGTH_SHORT).show();
+                                getActivity().finish();
                             }
                         });
 

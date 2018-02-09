@@ -1,5 +1,6 @@
 package com.coins.black.main_menu;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.Socket;
@@ -74,7 +76,7 @@ public class Signup extends AppCompatActivity {
         final TextView code_lbl = (TextView) findViewById(R.id.code_lbl);
 
         // get the app's SharedPreferences
-        save = getPreferences(0);
+        save = getSharedPreferences(MainActivity.PREFS_NAME, 0);
 
         final SharedPreferences.Editor saveEditor = save.edit();
 
@@ -238,6 +240,19 @@ public class Signup extends AppCompatActivity {
                                     log(json.getString("user_id"));
 
                                     // successfully signed up now go to main menu
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+                                    // stop the goddamn music
+                                    MainActivity.mediaPlayer.stop();
+
+                                    // Tell user that successfully signed up
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(getApplicationContext(), "You signed up successfully",Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
                                     finish();
                                 }
 

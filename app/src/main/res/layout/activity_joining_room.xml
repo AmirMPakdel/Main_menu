@@ -38,6 +38,10 @@
         android:layout_alignStart="@+id/joining_text"
         android:progressDrawable="@drawable/circular_progress_bar" />
 
-    <!--change-->
+    <FrameLayout
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
 
 </RelativeLayout>

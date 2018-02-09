@@ -1,5 +1,6 @@
 package com.coins.black.main_menu;
 
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -18,6 +19,9 @@ import android.widget.Toast;
 import com.github.nkzawa.socketio.client.IO;
 import com.github.nkzawa.socketio.client.Socket;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.net.URISyntaxException;
 
 import Fragments.Start;
@@ -26,9 +30,19 @@ public class MainActivity extends AppCompatActivity {
 
     boolean doubleBackToExitPressedOnce = false;
 
-    MediaPlayer mediaPlayer;
+    public static MediaPlayer mediaPlayer;
+
+    public static final String PREFS_NAME = "MAFIA_DATA";
+
+    public SharedPreferences save;
 
     public static Socket socket;
+
+    public static String user_id;
+
+    public static String username;
+
+    public static boolean signedin = false;
 
 
     public static void log(String info){Log.i("AAA Team :",info);}
@@ -55,6 +69,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
         socket.connect();
+
+        save = getSharedPreferences(PREFS_NAME, 0);
+
+        // check if user has signed up
+        if(save.getString("username","").length() != 0 && save.getString("user_id","").length() !=0){
+
+            signedin = true;
+
+            username = save.getString("username","");
+            user_id = save.getString("user_id","");
+
+            // initialize the user
+            JSONObject data = null;
+            try {
+
+                data = new JSONObject("{'username': "+username+", 'user_id':"+user_id+"}");
+
+                socket.emit("connected", data);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+        }
 
         //play the music
         mediaPlayer = MediaPlayer.create(this, R.raw.mafia_intro);
@@ -118,4 +157,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 4000);
     }
+
+
 }

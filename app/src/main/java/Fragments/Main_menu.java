@@ -66,6 +66,11 @@ public class Main_menu extends Fragment {
         button5 = (Button) view.findViewById(R.id.setting_btn);
         signupBtn = (Button) view.findViewById(R.id.signup_btn);
 
+        // if the user  is signed in then hide the signup button
+        if(MainActivity.signedin){
+            signupBtn.setVisibility(View.INVISIBLE);
+        }
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,6 +117,7 @@ public class Main_menu extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Signup.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 
