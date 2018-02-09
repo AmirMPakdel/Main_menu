@@ -17,45 +17,26 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="60"
-        android:id="@+id/joining_timer"
-        android:layout_below="@+id/joining_text"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ff243a"
-        android:textSize="35dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Chat"
-        android:id="@+id/joining_btn"
-        android:layout_below="@+id/joining_image"
-        android:layout_centerHorizontal="true" />
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/joining_image"
         android:src="@drawable/menu"
-        android:layout_below="@+id/joining_timer"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="50dp"/>
 
     <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/progressBar"
-        android:progressDrawable="@drawable/circular_progress_bar"
-        android:layout_below="@+id/joining_btn"
-        android:layout_alignRight="@+id/joining_text"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignEnd="@+id/joining_text"
         android:layout_alignLeft="@+id/joining_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/joining_text"
         android:layout_alignStart="@+id/joining_text"
-        android:layout_alignParentBottom="true" />
+        android:progressDrawable="@drawable/circular_progress_bar" />
 
     <!--change-->
 
