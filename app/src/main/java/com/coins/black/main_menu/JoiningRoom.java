@@ -54,9 +54,13 @@ public class JoiningRoom extends AppCompatActivity {
                         // get the room_id
                         room_id = data.getString("room_id");
 
+                        // go to the next fragment
+                        getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, new WaitBeforeStartFragment()).commit();
+
+
                         // restart the socket
-                        socket.disconnect();
-                        socket.connect();
+                        /*socket.disconnect();
+                        //socket.connect();
 
                         // initialize the user
                         JSONObject data2 = null;
@@ -70,15 +74,11 @@ public class JoiningRoom extends AppCompatActivity {
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                        }
-
-
-                        // go to the next fragment
-                        getSupportFragmentManager().beginTransaction().add(R.id.fragmentFrame, new WaitBeforeStartFragment()).commit();
-
+                        }*/
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
                 }
             });
 

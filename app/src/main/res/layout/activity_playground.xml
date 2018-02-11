@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coins.black.main_menu.Playground">
+
+    <EditText
+        android:id="@+id/input_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#FFF"
+
+        android:inputType="textAutoComplete|textMultiLine|textCapSentences"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/send_btn"/>
+
+    <ImageView
+        android:id="@+id/send_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/send_icon"
+
+        android:padding="10dp"
+        android:layout_margin="5dp"
+
+        android:layout_alignParentBottom="true"
+
+        android:layout_alignParentEnd="true"/>
+
+    <RelativeLayout
+        android:id="@+id/commonTools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolsFrame"
+        android:background="#fff"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Spinner
+            android:id="@+id/usernames_spn"
+            android:layout_width="85pt"
+            android:layout_height="40dp">
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote"
+
+            android:layout_toEndOf="@id/usernames_spn"/>
+
+        <TextView
+            android:id="@+id/time_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="#14d48a"
+            android:textSize="10pt"
+            android:text="Night"
+
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toEndOf="@id/vote"
+            android:layout_alignBottom="@id/vote" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_above="@id/input_txt"
+        android:layout_below="@+id/commonTools">
+
+        <TextView
+            android:id="@+id/output_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/toolsFrame"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFF"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+    </FrameLayout>
+
+</RelativeLayout>

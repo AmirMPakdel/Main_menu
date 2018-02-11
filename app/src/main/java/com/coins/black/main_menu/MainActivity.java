@@ -145,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
             finish();
             mediaPlayer.stop();
             super.onBackPressed();
+
+            //stop the app and close it for good
+            System.exit(0);
+
             return;
         }
         this.doubleBackToExitPressedOnce = true;

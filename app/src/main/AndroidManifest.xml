@@ -27,7 +27,8 @@
         <activity android:name=".Shop" />
         <activity android:name=".Setting" />
         <activity android:name=".JoiningRoom" />
-        <activity android:name=".Signup"></activity>
+        <activity android:name=".Signup" />
+        <activity android:name=".Playground"></activity>
     </application>
 
 </manifest>
